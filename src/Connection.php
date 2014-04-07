@@ -84,7 +84,8 @@ class Connection {
      */
     public function CloseConnection() {
         Error::JustLog( "Connection " . $this->connection_id . " closed." );
-        return ftp_close($this->connection_id);
+
+        return ftp_close( $this->connection_id );
     }
 
     /**
@@ -98,6 +99,7 @@ class Connection {
         }
 
         Error::JustLog( "Connection " . $this->connection_id . " opened." );
+
         return $this->connection_id;
     }
 
@@ -112,6 +114,7 @@ class Connection {
         }
 
         Error::JustLog( "Connection " . $this->connection_id . " logged in." );
+
         return $this->connection_result;
     }
 

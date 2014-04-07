@@ -41,7 +41,7 @@ class Error {
      */
     private static function writeToLog( $message, $line = "", $file = "", $trace = "" ) {
         $handler = fopen( self::$log_file, "a" );
-        fwrite( $handler, microtime(true) . " " . $line . " " . $file . " " . $message . " " . $trace );
+        fwrite( $handler, microtime( true ) . " " . $line . " " . $file . " " . $message . " " . $trace );
         fclose( $handler );
     }
 

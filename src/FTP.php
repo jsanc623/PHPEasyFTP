@@ -11,12 +11,13 @@ use jsanc623\PHPEasyFTP\Connection;
  * @package jsanc623\PHPEasyFTP
  */
 class FTP {
+
     protected $connection;
 
     /**
      *
      */
-    public function __construct($server, $username, $password, $port){
+    public function __construct( $server, $username, $password, $port ) {
         $this->connection = new Connection( $server, $username, $password, $port );
     }
 
@@ -24,7 +25,7 @@ class FTP {
      * @param $source
      * @param $destination
      */
-    public function Upload( $source, $destination ){
+    public function Upload( $source, $destination ) {
         FileManager::UploadFile( $this->connection, $source, $destination );
     }
 
